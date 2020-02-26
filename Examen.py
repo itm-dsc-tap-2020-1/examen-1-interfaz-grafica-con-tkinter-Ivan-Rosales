@@ -6,6 +6,7 @@ from tkinter import scrolledtext
 
 def funcion_click1():
     x=0
+    #print()
     if option.get()==1:
         x=x+20
     if option_1.get()==1 or option_2.get()==1:
