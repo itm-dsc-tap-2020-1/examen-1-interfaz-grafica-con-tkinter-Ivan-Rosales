@@ -11,6 +11,12 @@ def funcion_click1():
     if option_1.get()==1 or option_2.get()==1:
         if option_3.get()==0 and option_4.get()==0 and option_5.get()==0:
             x=x+20
+    if option2.get()==1:
+            x=x+20
+    if p1.get()=="es un modelo matemático usado para aproximar la relación":
+        x=x+20
+    if p2.get()=="una de las distribuciones de probabilidad de variable continua":
+        x=x+20
     mBox.showinfo("Calificacion","Tu calificacion es "+str(x))
 
 ventana=tk.Tk()
@@ -22,12 +28,12 @@ ventana.config(menu=barra_menu)
 
 texto1=ttk.Label(ventana,text="¿Que es la regresion lineal?").grid(column=0,row=0)
 p1=tk.StringVar()
-Pnombre=ttk.Entry(ventana,width=20, textvariable=p1)
+Pnombre=ttk.Entry(ventana,width=60, textvariable=p1)
 Pnombre.grid(column=1,row=0)
 
 texto1=ttk.Label(ventana,text="¿Qué es una distribución normal?").grid(column=0,row=1)
 p2=tk.StringVar()
-Pnombre=ttk.Entry(ventana,width=20, textvariable=p2)
+Pnombre=ttk.Entry(ventana,width=60, textvariable=p2)
 Pnombre.grid(column=1,row=1)
 
 texto10=ttk.Label(ventana,text="¿En que consiste la estadística descriptiva?").grid(column=0,row=2)
@@ -39,13 +45,13 @@ radio2.grid(column=0,row=4,sticky=tk.W)
 radio3=tk.Radiobutton(ventana,text="es una técnica estadística donde la puntuación de una variable Y se predice a partir de la puntuación de una segunda variable X", variable=option,value=3)
 radio3.grid(column=0,row=5,sticky=tk.W)
 
-texto10=ttk.Label(ventana,text="¿En que consiste la estadística descriptiva?").grid(column=0,row=6)
+texto10=ttk.Label(ventana,text="¿Es un metodo estadistico?").grid(column=0,row=6)
 option2=tk.IntVar()
-radio4=tk.Radiobutton(ventana,text="1", variable=option2,value=1)
+radio4=tk.Radiobutton(ventana,text="Niveles de medición", variable=option2,value=1)
 radio4.grid(column=0,row=7,sticky=tk.W)
-radio5=tk.Radiobutton(ventana,text="2", variable=option2,value=2)
+radio5=tk.Radiobutton(ventana,text="Técnicas de aproximacion", variable=option2,value=2)
 radio5.grid(column=0,row=8,sticky=tk.W)
-radio6=tk.Radiobutton(ventana,text="3", variable=option2,value=3)
+radio6=tk.Radiobutton(ventana,text="Experimentales", variable=option2,value=3)
 radio6.grid(column=0,row=9,sticky=tk.W)
 
 texto9=ttk.Label(ventana,text="¿Cual de las siguientes si son tipos de estadistica?").grid(column=0,row=10)
